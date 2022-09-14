@@ -13,7 +13,7 @@ function errore1(err){if (err) return console.error(err.message);console.log("co
 function errore2(err){if (err) return console.error(err.message);console.log("Personaggio Aggiunto")};
 
 function add(nome,livello,classe,pv,mana){db.run(sql, [nome, livello, classe, pv, mana], errore2());}
-function update(p1,p2){db.run(upsql, [p1,p2],errore());}
+function update(pc,cond,p1,p2){db.run(upsql, [p1,p2],errore());}
 function del(p){db.run(dsql,p, errore())}
 
 db.all(sqls,[],(err,rows)=>{
